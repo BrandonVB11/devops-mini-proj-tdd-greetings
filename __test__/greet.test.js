@@ -37,6 +37,9 @@ test('should return Hello, Brandon and Wen.', () => {
   expect(greet(['Brandon', 'Wen'])).toEqual('Hello, Brandon and Wen.')
 })
 
-test('should return Hello, Amy and Charlotte. AND HELLO BRIAN !', () => {
-  expect(test6(['Amy', 'BRIAN', 'Charlotte'])).toEqual('Hello, Amy and Charlotte. AND HELLO BRIAN !')
+/*
+Test6
+*/
+test('should return Hello, Wen and Brandon. AND HELLO LOTFI !', () => {
+  expect(test6(['Wen', 'LOTFI', 'Brandon'])).toEqual('Hello, Wen and Brandon. AND HELLO LOTFI !')
 })

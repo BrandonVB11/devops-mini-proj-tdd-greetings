@@ -9,21 +9,21 @@ test('should return Hello, Brandon. when name is Brandon', () => {
 Test2a
 */
 test('should return hello my friend when name is null', () => {
-  expect(greet(null)).toBe('Hello, my friend.')
+  expect(greet(null)).toEqual('Hello, my friend.')
 })
 
 /*
 Test2b
 */
 test('should return hello my friend when name is undefined', () => {
-  expect(greet(undefined)).toBe('Hello, my friend.')
+  expect(greet(undefined)).toEqual('Hello, my friend.')
 })
 
 /*
 Test2c
 */
 test('should return hello my friend when name is empty', () => {
-  expect(greet(' ')).toBe('Hello, my friend.')
+  expect(greet(' ')).toEqual('Hello, my friend.')
 })
 
 test('should return HELLO, BRANDON! when name is BRANDON', () => {

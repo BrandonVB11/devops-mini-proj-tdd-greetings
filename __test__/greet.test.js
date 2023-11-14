@@ -29,8 +29,11 @@ test('should return hello my friend when name is empty', () => {
   expect(greet(' ')).toEqual('Hello, my friend.')
 })
 
+/*
+Test3
+*/
 test('should return HELLO, BRANDON! when name is BRANDON', () => {
-  expect(greet('BRANDON')).toBe('HELLO, BRANDON!')
+  expect(greet('BRANDON')).toEqual('HELLO, BRANDON!')
 })
 
 test('should return Hello, Brandon and Wen.', () => {

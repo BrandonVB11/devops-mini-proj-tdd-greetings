@@ -1,4 +1,4 @@
-const greet = require('../src/greet')
+const { greet, test6 } = require('../src/greet')
 const { test, expect } = require('@jest/globals')
 
 /*
@@ -44,8 +44,8 @@ test('should return Hello, Brandon and Wen.', () => {
 })
 
 /*
-Test5
+Test6
 */
-test('should return Hello, Brandon,Wen and Lotfi when name is Brandon,Wen and Lotfi', () => {
-  expect(greet(['Brandon', 'Wen', 'Lotfi'])).toEqual('Hello, Brandon, Wen and Lotfi.')
+test('should return Hello, Wen and Brandon. AND HELLO LOTFI !', () => {
+  expect(test6(['Wen', 'LOTFI', 'Brandon'])).toEqual('Hello, Wen and Brandon. AND HELLO LOTFI !')
 })

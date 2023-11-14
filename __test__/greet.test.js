@@ -36,10 +36,16 @@ test('should return HELLO, BRANDON! when name is BRANDON', () => {
   expect(greet('BRANDON')).toEqual('HELLO, BRANDON!')
 })
 
+/*
+Test4
+*/
 test('should return Hello, Brandon and Wen.', () => {
-  expect(greet(['Brandon', 'Wen'])).toBe('Hello, Brandon and Wen.')
+  expect(greet(['Brandon', 'Wen'])).toEqual('Hello, Brandon and Wen.')
 })
 
+/*
+Test5
+*/
 test('should return Hello, Brandon,Wen and Lotfi when name is Brandon,Wen and Lotfi', () => {
-  expect(greet(['Brandon', 'Wen', 'Lotfi'])).toBe('Hello, Brandon, Wen and Lotfi.')
+  expect(greet(['Brandon', 'Wen', 'Lotfi'])).toEqual('Hello, Brandon, Wen and Lotfi.')
 })

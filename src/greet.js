@@ -41,4 +41,15 @@ function test6 (names) {
   return greeting
 }
 
-module.exports = { greet, test6 }
+function test7 (name, language) {
+  switch (language) {
+    case 'fr':
+      return `Bonjour, ${name}.`
+    case 'en':
+      return `Hello, ${name}.`
+    case 'nl':
+      return `Hallo, ${name}.`
+  }
+}
+
+module.exports = { greet, test6, test7 }

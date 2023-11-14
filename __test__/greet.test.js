@@ -33,3 +33,7 @@ test('should return HELLO, BRANDON! when name is BRANDON', () => {
 test('should return Hello, Brandon and Wen.', () => {
   expect(greet(['Brandon', 'Wen'])).toBe('Hello, Brandon and Wen.')
 })
+
+test('should return Hello, Brandon,Wen and Lotfi when name is Brandon,Wen and Lotfi', () => {
+  expect(greet(['Brandon', 'Wen', 'Lotfi'])).toBe('Hello, Brandon, Wen and Lotfi.')
+})

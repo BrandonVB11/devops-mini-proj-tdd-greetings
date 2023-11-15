@@ -44,6 +44,13 @@ test('should return Hello, Brandon and Wen.', () => {
 })
 
 /*
+Test5
+*/
+test('should return Hello, Brandon,Wen,Lotfi when name is Brandon,Wen and Lotfi.', () => {
+  expect(greet(['Brandon', 'Wen', 'Lotfi'])).toEqual('Hello, Brandon,Wen and Lotfi.')
+})
+
+/*
 Test6
 */
 test('should return Hello, Wen and Brandon. AND HELLO LOTFI !', () => {

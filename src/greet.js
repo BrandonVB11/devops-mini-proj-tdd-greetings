@@ -47,14 +47,13 @@ function test6 (names) {
 }
 
 function test7 (name, language) {
-  switch (language) {
-    case 'fr':
-      return `Bonjour, ${name}.`
-    case 'en':
-      return `Hello, ${name}.`
-    case 'nl':
-      return `Hallo, ${name}.`
+  const greetings = {
+    fr: `Bonjour, ${name}.`,
+    en: `Hello, ${name}.`,
+    nl: `Hallo, ${name}.`
   }
+
+  return greetings[language] || greetings.fr
 }
 
 module.exports = { greet, test2, test6, test7 }

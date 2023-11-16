@@ -1,7 +1,4 @@
 function greet (name) {
-  if (name === null || name === undefined || name === ' ') {
-    return 'Hello, my friend.'
-  }
   if (Array.isArray(name) && name.length === 3) {
     return `Hello, ${name[0]},${name[1]} and ${name[2]}.`
   }
@@ -12,6 +9,12 @@ function greet (name) {
     return 'HELLO, ' + name + '!'
   }
   return 'Hello, ' + name + '.'
+}
+
+function test2 (name) {
+  if (name === null || name === undefined || name === ' ') {
+    return 'Hello, my friend.'
+  }
 }
 
 function test6 (names) {
@@ -54,4 +57,4 @@ function test7 (name, language) {
   }
 }
 
-module.exports = { greet, test6, test7 }
+module.exports = { greet, test2, test6, test7 }

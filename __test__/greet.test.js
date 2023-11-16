@@ -1,4 +1,4 @@
-const { greet, test6, test7 } = require('../src/greet')
+const { greet, test2, test6, test7 } = require('../src/greet')
 const { test, expect } = require('@jest/globals')
 
 /*
@@ -12,21 +12,21 @@ test('should return Hello, Brandon. when name is Brandon', () => {
 Test2a
 */
 test('should return hello my friend when name is null', () => {
-  expect(greet(null)).toEqual('Hello, my friend.')
+  expect(test2(null)).toEqual('Hello, my friend.')
 })
 
 /*
 Test2b
 */
 test('should return hello my friend when name is undefined', () => {
-  expect(greet(undefined)).toEqual('Hello, my friend.')
+  expect(test2(undefined)).toEqual('Hello, my friend.')
 })
 
 /*
 Test2c
 */
 test('should return hello my friend when name is empty', () => {
-  expect(greet(' ')).toEqual('Hello, my friend.')
+  expect(test2(' ')).toEqual('Hello, my friend.')
 })
 
 /*

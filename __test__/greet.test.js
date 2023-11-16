@@ -44,6 +44,9 @@ test('should return Hello, Wen and Brandon. AND HELLO LOTFI !', () => {
   expect(test6(['Wen', 'LOTFI', 'Brandon'])).toEqual('Hello, Wen and Brandon. AND HELLO LOTFI !')
 })
 
+/*
+Test7
+*/
 test('should return Bonjour, Marie. when name is Marie and language is fr', () => {
   expect(test7('Marie', 'fr')).toEqual('Bonjour, Marie.')
 })

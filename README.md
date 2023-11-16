@@ -1,4 +1,4 @@
-# Projet DevOps 1 - Hello World
+# Projet DevOps 1 - Hello World - Group 28
 
 ## Description
 

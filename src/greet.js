@@ -64,7 +64,7 @@ function test7 (arr) {
     endReturn = ' en '
   }
 
-  return names.length === 1 ? toReturn + names[0] + '.' : toReturn + names[0] + endReturn + names[1] + '.';
+  return names.length === 1 ? toReturn + names[0] + '.' : toReturn + names[0] + endReturn + names[1] + '.'
 }
 
 module.exports = { greet, test2, test6, test7 }

@@ -70,5 +70,17 @@ test('should return Hello, Marie and Jean. when names are Marie and Jean and lan
 })
 
 test('should return Hello, Marie and Jean. when names are Marie and Jean and language is en', () => {
+  expect(test7(['Marie', 'Jean', 'nl'])).toEqual('Hallo, Marie en Jean.')
+})
+
+test('should return Hello, Marie and Jean. when names are Marie and Jean and language is en', () => {
+  expect(test7(['Marie', 'en'])).toEqual('Hello, Marie.')
+})
+
+test('should return Hello, Marie and Jean. when names are Marie and Jean and language is en', () => {
+  expect(test7(['Marie', 'fr'])).toEqual('Bonjour, Marie.')
+})
+
+test('should return Hello, Marie and Jean. when names are Marie and Jean and language is en', () => {
   expect(test7(['Marie', 'nl'])).toEqual('Hallo, Marie.')
 })

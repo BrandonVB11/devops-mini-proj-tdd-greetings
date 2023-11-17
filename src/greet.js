@@ -46,14 +46,25 @@ function test6 (names) {
   return greeting
 }
 
-function test7 (name, language) {
-  const greetings = {
-    fr: `Bonjour, ${name}.`,
-    en: `Hello, ${name}.`,
-    nl: `Hallo, ${name}.`
+function test7 (arr) {
+  let language
+  const names = []
+  let toReturn
+  let endReturn
+  // eslint-disable-next-line no-return-assign
+  arr.forEach((n) => n.length === 2 ? language = n : names.push(n))
+  if (language === 'fr') {
+    toReturn = 'Bonjour, '
+    endReturn = ' et '
+  } else if (language === 'en') {
+    toReturn = 'Hello, '
+    endReturn = ' and '
+  } else {
+    toReturn = 'Hallo, '
+    endReturn = ' en '
   }
 
-  return greetings[language] || greetings.fr
+  return names.length === 1 ? toReturn + names[0] + '.' : toReturn + names[0] + endReturn + names[1] + '.';
 }
 
 module.exports = { greet, test2, test6, test7 }

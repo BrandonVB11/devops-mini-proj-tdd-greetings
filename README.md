@@ -48,25 +48,36 @@ Liens utiles:
 
 - Décrivez brièvement ce que fait votre fichier YML.  
 ```bash
-<votre réponse ici>
+Le fichier YML déclenche un pipeline GitHub Actions à chaque push sur la branche main ou lorsqu'une pull request est ouverte ou modifiée. 
+Le pipeline effectue des opérations telles que le formatage du code, l'exécution des tests avec Jest, la construction du projet, et affiche des messages indiquant le début et la fin du pipeline, ainsi qu'un message de félicitations en cas de succès.
 ```
 - En particulier : à quoi sert le “on” ? dans votre fichier YML ?  Quelle est la différence entre “on push” et “on pull request”. Que conseilleriez-vous comme option parmi ces 2 options à un groupe de développeurs junior ? Pourquoi ? 
 ```bash
-<votre réponse ici>
+La section 'on' spécifie les évènement qui déclenchent l'exécution du pipeline. 
+'on push' : Signifie que le pipeline sera déclenché à chaque fois qu'il y aura un push sur la branche principale.
+'on pull request' : Signifie le pipeline sera déclenché à chaque fois qu'une pull request est ouverte ou modifiée. 
+Chaque option a son avantage. Mais de notre point de vue, nous conseillons le 'on pull request'. Même si cela prend plus de temps s'il y a des validations à effectuer, cette option permet de tester les modifications proposées avant de les fusionner dans la branche principale. Et ça évite également des exécutions inutiles du pipeline pour des commits qui n'ont pas encore été intégrés.
 ```
 - Quelle est la différence entre run et run_on ?  Expliquez par rapport à votre pipeline.  
 ```bash
-<votre réponse ici>
+ 'run-on' spécifie l'environnement d'exécution global pour toutes les étapes d'un travail, tandis que 'run' est utilisé à l'intérieur de chaque étape pour indiquer la commande ou le script spécifique à exécuter pendant cette étape sur l'environnement défini par 'run-on'.
 ```
 - Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline. 
 ```bash
-<votre réponse ici>
+'use' spécifie l'action Github ou le référentiel contenant le script à utiliser. L'action ou le script spécifié par 'use" sera exécuté comme une étape de la construction.
+Par exemple : 'uses : actions/checkout@v3' est une action GitHub prédéfinie qui permet de récupérer le code source du référentiel.
+'run' indique la commande ou le script à exécuter pendant cette étape. Le script spécifié par 'run' sera exécuté sur l'environnement de l'action ou du référentiel spécifié par 'uses'
+Par exemple : 'run : npm i' est une commande npm qui installe les dépendances du projet.
 ```
 - Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline. 
 ```bash
-<votre réponse ici>
+Oui, on peut intervetir les étapes dans notre pipelice, mais il est essentiel de comprendre l'impact logique de ces changements et d'assurer que l'ordre des étapes répond toujours aux besoins de notre processus de construction et de déploiement.
 ```
 - Je veux ajouter un test de sécurité sur mon pipeline en exécutant le programme secure_app. Que devrais-je faire ?  Quelles questions devriez-vous vous poser ? 
 ```bash
-<votre réponse ici>
+- Quel outil pour le test de sécurité? 
+- Où se trouve le test de sécurité qu'on souhaiterait exécuter?
+- Quand devons nous exécuter le test de sécurité dans le pipeline ?
+- Quelle est la tolérance aux faux positifs ?
+- Comment gérer les résultats des tests de sécurité ? 
 ```

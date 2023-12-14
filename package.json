@@ -22,8 +22,8 @@
         "commit": "cz",
         "prettier": "prettier --check .",
         "prettier:fix": "prettier --write .",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix",
+        "lint": "eslint \"src/**/*.js\"",
+        "lint:fix": "eslint --fix \"src/**/*.js\"",
         "code:fix": "prettier --write . && eslint . --fix",
         "test": "jest"
     },

@@ -28,7 +28,7 @@
         "test": "jest",
         "test:coverage": "jest --coverage",
         "test:watch": "jest --watchAll",
-        "build": "webpack ./src/app.js -o public/"
+        "build": "webpack ./src/greet.js -o public/"
     },
     "repository": {
         "type": "git",

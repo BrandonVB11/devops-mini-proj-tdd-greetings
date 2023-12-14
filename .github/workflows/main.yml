@@ -1,6 +1,9 @@
 name: Intégration
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
+  push:
+    branches:
+      - main
   pull_request:
     types: [opened, edited]
 jobs:
@@ -8,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install dependencies 📦
         run: npm i

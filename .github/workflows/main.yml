@@ -1,0 +1,35 @@
+name: Intégration
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  pull_request:
+    types: [opened, edited]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Install dependencies 📦
+        run: npm i
+
+      - name: Start pipeline 🚀
+        run: echo "Pipeline started at $(date)! 🚀"
+
+      - name: Format code with Prettier 🎨
+        run: npm run prettier:fix
+
+      - name: Format code with ESLint 🎨
+        run: npm run lint:fix
+
+      - name: Test and Coverage with Jest 🧪
+        run: npm run test && npm run test:coverage
+
+      - name: Build 🏗️
+        run: npm run build
+
+      - name: End of pipeline 🏁
+        run: echo "Pipeline finished at $(date)! 🏁"
+
+      - name: Success message 🎉
+        run: echo "Congratulations ${{ github.actor }} and PIPELINE SUCCESS WITHOUT ERRORS! 🎉"

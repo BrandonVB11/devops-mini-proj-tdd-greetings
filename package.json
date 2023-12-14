@@ -22,10 +22,13 @@
         "commit": "cz",
         "prettier": "prettier --check .",
         "prettier:fix": "prettier --write .",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix",
+        "lint": "eslint \"src/**/*.js\"",
+        "lint:fix": "eslint --fix \"src/**/*.js\"",
         "code:fix": "prettier --write . && eslint . --fix",
-        "test": "jest"
+        "test": "jest",
+        "test:coverage": "jest --coverage",
+        "test:watch": "jest --watchAll",
+        "build": "webpack ./src/app.js -o public/"
     },
     "repository": {
         "type": "git",
@@ -38,6 +41,10 @@
     },
     "homepage": "https://github.com/BrandonVB11/devops-mini-proj-tdd-greetings#readme",
     "dependencies": {
-        "jest": "^29.7.0"
+        "commitizen": "^4.3.0",
+        "jest": "^29.7.0",
+        "nodemon": "^3.0.1",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4"
     }
 }

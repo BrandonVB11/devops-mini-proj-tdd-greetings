@@ -1,5 +1,5 @@
 name: Intégration
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: Testing out GitHub Actions 🚀
 on:
   push:
     branches:
@@ -35,4 +35,4 @@ jobs:
         run: echo "Pipeline finished at $(date)! 🏁"
 
       - name: Success message 🎉
-        run: echo "Congratulations ${{ github.actor }} and PIPELINE SUCCESS WITHOUT ERRORS! 🎉"
+        run: echo "CONGRATULATIONS PIPELINE SUCCESS WITHOUT ERRORS ! 🎉"

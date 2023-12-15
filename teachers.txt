@@ -1,0 +1,2 @@
+ce fichier est creer pour push quelque chose sur github et laisser une Pull Request Ouverte pour que
+Nos professeurs puissent voir notre travail et tester notre pipeline avec Github Actions.
